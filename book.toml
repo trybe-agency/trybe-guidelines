@@ -1,0 +1,8 @@
+[book]
+title = "Arched Door"
+authors = ["Abdeldjalil Hebal"]
+src = "content"
+
+[output.html]
+default-theme = "dark"
+preferred-dark-theme = "ayu"

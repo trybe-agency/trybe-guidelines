@@ -1,0 +1,6 @@
+[build]
+publish = "book/"
+
+[[edge_functions]]
+function = "check-auth.js"
+path = "/*"

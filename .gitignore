@@ -1,0 +1,5 @@
+# Build output
+book
+
+# Local Netlify folder
+.netlify
