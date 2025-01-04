@@ -34,32 +34,42 @@ It's not about a specific tech, it's about the process:
     * Why? We're more used to Netlify. It's straightforward to use.
     * Alternatives:
         + Vercel.
+          See [their middleware example](https://github.com/vercel/examples/blob/main/edge-middleware/basic-auth-password/middleware.ts).
 
 
-## Arched Door: Branding
+## Branding
 
-Main theme: Desert.
+Main theme: Desert. Algerian Desert.
 
-**Arched**, literally an arched door
-Arched as in architecture, suggestion it is a tech-related.
+### Naming
 
-**Door**:  Charles Dickens' door quote.
-Think: Door of knowledge.
+**Arched Door** is the final choice.
 
-### Name
+  - **Arched**:
 
-The name was gonna be either Chickadee, Secretarybird, or some other bird
-(but not ravens/crows though, they are way smarter than this thing).
+      * Literally an arched door.
 
-Possible names:
+      * "Arch" as in _arch_itecture, suggesting it is tech-related.
 
-- [x] Chickadee (code name)
+  - **Door**:
 
-- [ ] Secretarybird
+      * Charles Dickens' door quote.
+
+      * Think: Door of knowledge.
+
+Other options:
+
+- [ ] Brainiac Hatter (Alice in Wonderland)
+
+- [ ] Chickadee (bird, memory, able to remember specific things)
+
+- [ ] Secretarybird (bird, secretary)
 
 - [ ] Stellar Almanac (astronomy-related)
 
 - [ ] Red coral
+    * Its color looks cool.
+    * Red coral is used in Amazigh jewelry.
 
 - [x] Arched Door
 
@@ -68,7 +78,7 @@ Possible names:
 
 ### About mdBook
 
-See: [About mdbook](./about-mdbook.md).
+See [about-mdbook.md](./about-mdbook.md).
 
 ### About the GitHub Action
 
@@ -76,7 +86,7 @@ The GitHub Action expects the following environment secrets:
 - `NETLIFY_AUTH_TOKEN`
 - `NETLIFY_SITE_ID`
 
-It uses a prebuilt binary (fast) and falls back to building from source (slow).
+It uses a prebuilt binary (fast) and falls back to building from the source (slow).
 
 
 ## License
