@@ -1,6 +1,6 @@
 const customElementSources = [
     'https://kaitos-animated-image.vercel.app/custom-element.mjs',
-    'https://kaitos-scroll-to-top.vercel.app/custom-element.mjs',
+    'https://kaitos-back-to-top.vercel.app/custom-element.mjs',
 ];
 
 for (const customElementSource of customElementSources) {

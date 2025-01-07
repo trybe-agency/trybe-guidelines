@@ -2,8 +2,8 @@
 
 Example of using custom elements.
 
-~~[Using `<k-scroll-to-top>`](https://github.com/djalilhebal/kaitos):~~
-<k-scroll-to-top></k-scroll-to-top>
+[Using `<k-back-to-top>`](https://github.com/djalilhebal/kaitos):
+<k-back-to-top></k-back-to-top>
 
 Using [`<k-animated-image>`](https://github.com/djalilhebal/kaitos):
 <k-animated-image src="https://kaitos-animated-image.vercel.app/robin-breaking-vase.mp4" caption="Robin analyzes a vase then dramatically breaks it." loopa="4.20" loopb="4.60"></k-animated-image>
