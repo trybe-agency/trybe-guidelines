@@ -1,14 +1,17 @@
-# Custom element example
+# The Waste Land
+
+Example of using custom elements.
+
+~~[Using `<k-scroll-to-top>`](https://github.com/djalilhebal/kaitos):~~
+<k-scroll-to-top></k-scroll-to-top>
 
 Using [`<k-animated-image>`](https://github.com/djalilhebal/kaitos):
-
-<script type="module" src="https://kaitos-animated-image.vercel.app/index.js"></script>
-
 <k-animated-image src="https://kaitos-animated-image.vercel.app/robin-breaking-vase.mp4" caption="Robin analyzes a vase then dramatically breaks it." loopa="4.20" loopb="4.60"></k-animated-image>
 
 
 ## THE WASTE LAND
 
+```
 "Nam Sibyllam quidem Cumis ego ipse oculis meis vidi in ampulla pendere, et cum illi pueri dicerent: Sibylla ti theleis; respondebat illa: apothanein thelo."
 
 I. THE BURIAL OF THE DEAD
@@ -487,4 +490,8 @@ These fragments I have shored against my ruins
 Why then Ile fit you. Hieronymo's mad againe.
 Datta. Dayadhvam. Damyata.
                            Shantih shantih shantih
+```
 
+---
+
+END.
