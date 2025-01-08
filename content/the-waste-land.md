@@ -2,14 +2,17 @@
 
 Example of using custom elements.
 
-[Using `<k-back-to-top>`](https://github.com/djalilhebal/kaitos):
+Using [`<k-back-to-top>`](https://github.com/djalilhebal/kaitos)
+(try scrolling down):
 <k-back-to-top></k-back-to-top>
 
 Using [`<k-animated-image>`](https://github.com/djalilhebal/kaitos):
 <k-animated-image src="https://kaitos-animated-image.vercel.app/robin-breaking-vase.mp4" caption="Robin analyzes a vase then dramatically breaks it." loopa="4.20" loopb="4.60"></k-animated-image>
 
 
-## THE WASTE LAND
+## The Waste Land by T. S. Eliot
+
+See [The Waste Land | Wikipedia](https://en.wikipedia.org/wiki/The_Waste_Land)
 
 ```
 "Nam Sibyllam quidem Cumis ego ipse oculis meis vidi in ampulla pendere, et cum illi pueri dicerent: Sibylla ti theleis; respondebat illa: apothanein thelo."
