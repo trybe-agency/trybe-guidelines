@@ -18,4 +18,4 @@ A choose-your-own-adventure style section.
 
 ---
 
-END.
+END
