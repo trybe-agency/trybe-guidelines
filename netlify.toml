@@ -1,6 +1,9 @@
 [build]
-publish = "book/"
+  command = "npm run docs:build"
+  functions = "functions"
+  publish = "docs/.vitepress/dist"
 
-[[edge_functions]]
-function = "check-auth.js"
-path = "/*"
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/auth"
+  status = 200

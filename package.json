@@ -1,0 +1,22 @@
+{
+  "name": "trybe-guidelines",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "netlify:build": "npm run docs:build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "express": "^4.21.2",
+    "netlify-lambda": "^2.0.16",
+    "vitepress": "^1.6.3"
+  }
+}
