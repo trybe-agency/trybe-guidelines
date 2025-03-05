@@ -171,12 +171,22 @@
     </div>
 
     <script>
-        const correctPassword = "lopoko"; // Hardcoded Password
-
-        function login() {
+        const correctPassword = "26967b7e73500347f08224ccb27df3d4650e27602fc8fb3ddf593f09fa1e7447"; // Hardcoded Password
+        
+        async function hashPassword(password) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(password);
+            const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+            return Array.from(new Uint8Array(hashBuffer))
+                .map((b) => b.toString(16).padStart(2, "0"))
+                .join("");
+        }
+        
+        async function login() {
             const enteredPassword = document.getElementById("password").value;
-            if (enteredPassword === correctPassword) {
-                localStorage.setItem("auth", correctPassword); // Store authentication state
+            const hashedPassword = await hashPassword(enteredPassword);
+            if (hashedPassword === correctPassword) {
+                localStorage.setItem("auth", hashedPassword); // Store authentication state
                 window.location.href = "/"; // Redirect to documentation
             } else {
                 alert("Incorrect password. Try again.");
