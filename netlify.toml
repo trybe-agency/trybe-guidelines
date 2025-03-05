@@ -2,19 +2,12 @@
   command = "npm run docs:build"
   publish = "docs/.vitepress/dist"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Robots-Tag = "noindex"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = true
-  conditions = {Role = "authenticated"}
+[[edge_functions]]
+  path = "/*"
+  function = "auth"
 
 [[headers]]
   for = "/*"
   [headers.values]
-    Basic-Auth = "yourUsername:yourPassword"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
