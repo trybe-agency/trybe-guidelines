@@ -1,25 +1,52 @@
-const express = require('express');
-const basicAuth = require('basic-auth');
+const redirectToAuth = (event) => {
+  const authHeader = event.headers.authorization;
+  
+  if (!authHeader) {
+    return {
+      statusCode: 401,
+      headers: {
+        'WWW-Authenticate': 'Basic realm="Secure Area"',
+        'Content-Type': 'text/plain'
+      },
+      body: 'Authentication required'
+    };
+  }
 
-exports.handler = (event, context) => {
-  const app = express();
+  const [username, password] = Buffer.from(
+    authHeader.split(' ')[1], 
+    'base64'
+  ).toString().split(':');
 
-  app.use((req, res, next) => {
-    const user = basicAuth(req);
-    
-    // Replace with your desired single password
-    const validPassword = 'lopoko';
-    
-    if (!user || user.pass !== validPassword) {
-      res.set('WWW-Authenticate', 'Basic realm="Documentation Access"');
-      return res.status(401).send('Authentication required');
-    }
-    
-    next();
-  });
+  // Replace with your actual credentials
+  const validUsername = 'trybe';
+  const validPassword = 'lopoko';
 
-  // Serve your VitePress site
-  app.use(express.static('docs/.vitepress/dist'));
+  if (
+    username !== validUsername || 
+    password !== validPassword
+  ) {
+    return {
+      statusCode: 401,
+      headers: {
+        'WWW-Authenticate': 'Basic realm="Secure Area"',
+        'Content-Type': 'text/plain'
+      },
+      body: 'Invalid credentials'
+    };
+  }
 
-  return app(req, res);
+  // If authentication succeeds, allow access
+  return {
+    statusCode: 200,
+    body: 'Authentication successful'
+  };
+};
+
+exports.handler = async (event) => {
+  // Only apply authentication for GET requests
+  if (event.httpMethod !== 'GET') {
+    return { statusCode: 405, body: 'Method Not Allowed' };
+  }
+
+  return redirectToAuth(event);
 };
