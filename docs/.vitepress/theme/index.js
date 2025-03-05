@@ -12,12 +12,11 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    router.beforeEach((to, from, next) => {
-      if (!localStorage.getItem("auth") && to.path !== "/login.html") {
-        window.location.href = "/login.html"; // Redirect to login
-      } else {
-        next();
+    if (typeof window !== "undefined") {
+      // Check if user is authenticated
+      if (!localStorage.getItem("auth") && window.location.pathname !== "/login.html") {
+        window.location.href = "/login.html"; // Redirect to login page
       }
-    });
+    }
   },
 }

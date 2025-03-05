@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; margin-top: 100px; }
+        input { padding: 10px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h2>Enter Password to Access Documentation</h2>
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="login()">Login</button>
+
+    <script>
+        const correctPassword = "lopoko"; // Hardcoded password
+
+        function login() {
+            const enteredPassword = document.getElementById("password").value;
+            if (enteredPassword === correctPassword) {
+                localStorage.setItem("auth", "true"); // Store authentication state
+                window.location.href = "/"; // Redirect to documentation
+            } else {
+                alert("Incorrect password. Try again.");
+            }
+        }
+
+        // If already logged in, redirect
+        if (localStorage.getItem("auth") === "true") {
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>
