@@ -17,6 +17,9 @@ export default {
       if (!localStorage.getItem("auth") && window.location.pathname !== "/login.html") {
         window.location.href = "/login.html"; // Redirect to login page
       }
+      if(localStorage.getItem("auth") !== "lopoko") {
+        window.location.href = "/login.html"; // Redirect to login page
+      }
     }
   },
 }
